@@ -31,11 +31,12 @@ contract Raffel {
         emit enterraffale(msg.sender);
     }
 
-    function getwinner() external {
-        if(block.timestamp-s_lasttimestamp<i_interval){
+    function getwinner() external view {
+        if (block.timestamp - s_lasttimestamp < i_interval) {
             revert();
         }
     }
+
     /* getter Function8 */
     function getenterancefee() external view returns (uint256) {
         return i_enterancefee;

@@ -1,14 +1,13 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.18;
 
 import {Test, console} from "forge-std/Test.sol";
-import {Lottery} from "../src/Lottery.sol";
+import {Raffel} from "../src/Lottery.sol";
 
 contract CounterTest is Test {
-    Lottery public lottery;
+    Raffel public lottery;
 
     function setUp() public {
-        lottery = new Lottery();
+        lottery = new Raffel(20, 25);
     }
-    
 }
