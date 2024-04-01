@@ -10,4 +10,5 @@ contract CounterTest is Test {
     function setUp() public {
         lottery = new Lottery();
     }
+    
 }
